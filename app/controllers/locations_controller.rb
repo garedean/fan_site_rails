@@ -2,8 +2,11 @@ class LocationsController < ApplicationController
 
   def index
     @location = Location.new
-    @locations = Location.all
-
+    if params[:sort] == 'true'
+      @locations = Location.sort(:asc)
+    else
+      @locations = Location.sort(:desc)
+    end
   end
 
   def show
@@ -48,7 +51,7 @@ class LocationsController < ApplicationController
 
   private
   def location_params
-    params.require(:location).permit(:name, :description)
+    params.require(:location).permit(:name, :description, :sort)
   end
 
 end

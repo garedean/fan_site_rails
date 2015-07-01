@@ -1,7 +1,15 @@
 <p class='text-center lead section-title'>Best Beaches Around the World</p>
 
+<a href="?sort=true">Sort A-Z</a>
+<a href="?sort=false">Sort Z-A</a>
+
 <ul class="beach-list">
   <% @locations.each do |location| %>
-  <li><%= link_to location.name, location_path(location) %></li>
+  <li>
+    <%= link_to location.name, location_path(location) %>
+    <span class="pull-right">
+      <%= location.average_rating %>
+    </span>
+  </li>
   <% end %>
 </ul>
