@@ -5,6 +5,19 @@ body {
   background-image: url('bg.jpg');
   background-size: cover;
   padding-top: 40px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.red {
+  color: #ff6f69
+}
+
+.grayed {
+  color: #555;
 }
 
 header {
@@ -67,4 +80,16 @@ ul.beach-list {
   position: absolute;
   top: 5px;
   right: 5px;
+}
+
+ul.review-list {
+  margin-top: 20px;
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+  .review-row {
+    padding: 10px;
+    border-top: 1px solid #bbb;
+    list-style-type: inherit;
+    -webkit-padding-start: inherit;
+  }
 }

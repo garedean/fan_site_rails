@@ -1,4 +1,8 @@
-<p><%= @location.name %></p>
+<h3 class="red"><%= @location.name %></h3>
+  <hr>
+
+<span class="small grayed">Description:</span>
+<p><%= @location.description %></p>
 
 <p class="upper-right">
   <%= link_to "Edit", edit_location_path %> |
@@ -7,4 +11,24 @@
                                    :method => "delete"}, class: "text-danger" %>
 </p>
 
-<p><%#= link_to "Return to Beach Locations", locations_path %></p>
+<%= form_for [@location, @review] do |f| %>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <%= f.label :comment %>
+  <%= f.text_field :comment %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating, min: 1, max: 5 %>
+  <%= f.submit %>
+<% end %>
+
+<ul class="review-list">
+  <% @location.reviews.each do |review| %>
+    <li>
+      <ul class="review-row">
+        <li class="author"><%= review.author %></li>
+        <li class="comment"><%= review.comment %></li>
+        <li class="rating"><%= review.rating %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>

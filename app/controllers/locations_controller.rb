@@ -3,11 +3,12 @@ class LocationsController < ApplicationController
   def index
     @location = Location.new
     @locations = Location.all
-    render :index
+
   end
 
   def show
     @location = Location.find(params[:id])
+    @review = @location.reviews.new
     render :show
   end
 
@@ -18,6 +19,7 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new(location_params)
+    @locations = Location.all
     if @location.save
       redirect_to locations_path
     else
@@ -46,7 +48,7 @@ class LocationsController < ApplicationController
 
   private
   def location_params
-    params.require(:location).permit(:name)
+    params.require(:location).permit(:name, :description)
   end
 
 end
