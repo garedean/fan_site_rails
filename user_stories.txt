@@ -1,0 +1,17 @@
+As a user, I want to add a new item to the works in the theme so I can share details I know with other fans.
+
+As a user, I want to be able to edit and delete works on the site so that information is correct and current.
+
+As a user, I want to be able to sort works alphabetically by name or chronologically by create date so that I can find titles either way.
+
+As a user, I want to be able to view each work individually to see all of its details.
+
+As a user, I want to be able to give each work a rating and see the average rating of all users.
+
+As a user, I want to be able to write my own opinion/review of each work.
+
+As a user, I want to be able to view a featured work on the home page that randomly changes each time I visit.
+
+As a user, I want to be able to search for works by keywords. (Try the textacular gem for text searches).
+
+As a user, I want to be able to see all of the returned values of a search on several pages. (Try the Kaminari or will_paginate gems for pagination.)

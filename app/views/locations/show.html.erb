@@ -1,0 +1,10 @@
+<p><%= @location.name %></p>
+
+<p class="upper-right">
+  <%= link_to "Edit", edit_location_path %> |
+  <%= link_to "Delete", location_path(@location),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"}, class: "text-danger" %>
+</p>
+
+<p><%#= link_to "Return to Beach Locations", locations_path %></p>

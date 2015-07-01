@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FanSiteRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+
+    <%= link_to "BEACHES", locations_path, class: "brand" %>
+
+    <%#= link_to "ADD NEW", locations_path, class: "add-new" %>
+
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="column col-sm-8 col-sm-offset-2">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  padding-top: 40px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+  background: rgba(255, 255, 255, .8);
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 15px;
+  font-size: 1.1em;
+  line-height: 40px;
+  color: #5f977b;
+  border-bottom: 1.5px solid #ff6f69;
+
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+    }
+  }
+  .add-new {
+    float: right;
+  }
+}
+
+.row {
+  margin-top: 50px;
+  .column {
+    background: rgba(255, 255, 255, .8);
+    min-height: 400px;
+    overflow:auto;
+    position: relative;
+  }
+}
+
+.section-title {
+  margin-top: 20px;
+}
+
+ul.beach-list {
+  list-style-type: none;
+  font-size: 1.1em;
+  -webkit-padding-start: 0px;
+  > li {
+    border-top: 1px solid #bbb;
+    padding: 7px 0;
+    &:last-child {
+      border-bottom: 1px solid #bbb;
+    }
+  }
+}
+
+.form-wrapper {
+  margin: 5px 0;
+}
+
+.upper-right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
